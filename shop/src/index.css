@@ -4,8 +4,6 @@
     padding: 0;
 }
 .nav{
-    position: absolute;
-    right: 0;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -52,7 +50,6 @@
     align-items: center;
     width: 98%;
     gap: 1rem;
-    margin: 5rem auto;
 }
 .product img{
     width: 100%;
@@ -137,5 +134,175 @@
 .linkBtn:hover{
     cursor: pointer;
     background: rgb(220, 225, 220);
+    color: blue;
+}
+
+.cartContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.cartContainer h4{
+    margin-bottom: 4rem;
+    font-size: 20px;
+}
+.cartItems{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.innerContainer{
+    width: 90%;
+}
+.cartItem{
+    height: 220px;
+    display: flex;
+    border-bottom: 1px solid gray;
+}
+
+.cartItem img{
+    max-height: 200px;
+    width: 200px;
+    object-fit: contain;
+}
+
+.itemInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+}
+.itemInfo h5{
+    font-size: 16px;
+    margin-bottom: .5rem;
+}
+.itemInfo input{
+    margin: .5rem 0 1rem 0;
+}
+.itemInfo button{
+    padding: .3rem .6rem;
+}
+.itemInfo button:hover{
+    cursor: pointer;
+}
+
+.cartBtns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem auto;
+    gap: 1rem;
+    width: 100%;
+}
+.cartBtns p{
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+}
+.cartBtns button{
+    width: 40%;
+    padding: .3rem .6rem;
+}
+.cartBtns .link{
+    font-size: inherit;
+    color: inherit;
+}
+.checkoutContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    margin: auto;
+}
+.checkoutContainer h1{
+    width: 100%;
+    text-align: center;
+}
+.checkoutContainer h3{
+    width: 100%;
+}
+.orderOverview{
+    width: 30%;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid blue;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.orderOverview .item{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    border-bottom: 2px dotted gray;
+    padding-bottom: 1rem;
+}
+.orderOverview .item img{
+    max-width: 60px;
+}
+.orderOverview .item h4{
+    width: 60%;
+}
+
+.shipping{
+    width: 90%;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+.shipping form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    justify-content: space-between;
+}
+form div{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+form input{
+    padding: .4rem .8rem;
+    margin-top: .5rem;
+}
+.payment form{
+    width: 90%;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid blue;
+    border-radius: 5px;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+.other{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.checkoutBtn{
+    width: 100%;
+    background: #ddd;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.checkoutBtn button{
+    padding: .3rem .8rem;
+}
+.checkoutBtn button .link{
+    color: inherit;
+    transition: all .2s ease-in-out;
+}
+.checkoutBtn button .link:hover{
     color: blue;
 }

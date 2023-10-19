@@ -41,7 +41,7 @@ const ViewProduct = () => {
                     }
                   }}>Add to Cart</button>
                 ): (
-                  <button className="linkBtn"><Link to={'/cart'} disabled className="linkBtn">View Cart</Link></button>
+                  <button className="linkBtn"><Link to={'/cart'} disabled className="link">View Cart</Link></button>
                 )}
               </div>
               

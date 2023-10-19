@@ -5,22 +5,22 @@ import Empty from "../components/Empty";
 const Cart = () => {
   const { cart, setCart } = useOutletContext();
   const total = cart.reduce((acc, curr) => acc + curr.price * curr.quantity, 0)
- 
+  console.log(cart)
   return (
-      <div>
-        <div>
+      <div className="cartContainer">
+        <div className="innerContainer">
           <h4>My Cart ({cart.length})</h4>
           {cart.length === 0 && <Empty />}
-          <div>
+          <div className="cartItems">
             {cart.map((product) => {
               return (
-                <div key={product.id}>
+                <div key={product.id} className="cartItem">
                   <img
                     src={product.image}
                     alt={product.title}
                   />
-                  <div>
-                    <h6>{product.title}</h6>
+                  <div className="itemInfo">
+                    <h5>{product.title}</h5>
                     <div>
                       <div>
                           {product.quantity} X ${product.price}
@@ -57,30 +57,30 @@ const Cart = () => {
               )
             })}
           </div>
-        </div>
-        {cart.length > 0 && (
+          {cart.length > 0 && (
           <div>
-            <div>
-                Total: ${total.toFixed(2)}
-                <button
-                  onClick={() => {
-                    setCart([])
-                  }}
+            <div className="cartBtns">
+               <p>Total: ${total.toFixed(2)}</p> 
+                <button 
+                  // onClick={() => {
+                  //   setCart([])
+                  // }}
                 >
-                  <Link
+                  <Link className="link"
                     to='/checkout'>
-                    PROCEED TO CHECKOUT
+                    Proceed to checkout
                   </Link>
                 </button>
                 <button >
-                  <Link
+                  <Link className="link"
                     to='/shop'>
                     Continue shopping
-                  </Link>{' '}
+                  </Link>
                 </button>
               </div>
             </div>
         )}
+        </div>
       </div>
   )
 }
