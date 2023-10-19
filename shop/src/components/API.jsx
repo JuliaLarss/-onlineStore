@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from 'axios';
 
-const API = (url) => {
+const Api = (url) => {
     const [ data, setData ] = useState(null);
     const [ loading, setLoading ] = useState(true);
     const [ error, setError ] = useState(null);
@@ -27,4 +27,4 @@ const API = (url) => {
     return { data, loading, error }
 }
 
-export default API;
+export default Api;

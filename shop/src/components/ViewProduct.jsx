@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link, useOutletContext, useParams } from "react-router-dom"
-import API from "./API"
+import Api from "./Api"
 import Loading from "./Loading"
 
 const ViewProduct = () => {
@@ -12,7 +12,7 @@ const ViewProduct = () => {
     data:product,
     loading,
     error,
-  } = API(`https://fakestoreapi.com/products/${id}`)
+  } = Api(`https://fakestoreapi.com/products/${id}`)
 
     return (
       <div>

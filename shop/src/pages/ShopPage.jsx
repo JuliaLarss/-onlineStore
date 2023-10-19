@@ -1,11 +1,11 @@
 import { useOutletContext } from "react-router-dom"
 import Loading from '../components/Loading'
 import Product from "../components/Product"
-import API from '../components/API'
+import Api from '../components/Api'
 const ShopPage = () => {
 
   const {url} = useOutletContext()
-  const  {data, loading, error} = API(url)
+  const  {data, loading, error} = Api(url)
   data && console.log(data)
   loading && console.log('Loading...')
   error && console.log('Error message: ', error)
