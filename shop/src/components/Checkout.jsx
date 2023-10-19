@@ -2,7 +2,7 @@ import { Link, useOutletContext } from "react-router-dom"
 
 
 const Checkout = () => {
-  const {cart} = useOutletContext();
+  const {cart, setCart} = useOutletContext();
   console.log(cart)
   const total = cart.reduce((acc, curr) => acc + curr.price * curr.quantity, 0)
     return (
@@ -60,6 +60,7 @@ const Checkout = () => {
         </div>
         <div className="payment">
           <form>
+            <h3>Payment details</h3>
             <div>
               <label>Name on Card</label>
               <input type="text" name="name" />
@@ -77,13 +78,11 @@ const Checkout = () => {
         </div>
         <div className="checkoutBtn">
           <button><Link to='/shop' className="link">Continue shopping</Link></button>
-          <button><Link to='/shop' className="link">Send Order</Link></button>
+          <button 
+          onClick={() => {setCart([])}}><Link to='/shop' className="link">Send Order</Link></button>
         </div>
       </div>
     )
   }
 
   export default Checkout
-
-  // Order overview
-  // form for shipping & payment 

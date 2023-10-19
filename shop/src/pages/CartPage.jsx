@@ -61,11 +61,7 @@ const Cart = () => {
           <div>
             <div className="cartBtns">
                <p>Total: ${total.toFixed(2)}</p> 
-                <button 
-                  // onClick={() => {
-                  //   setCart([])
-                  // }}
-                >
+                <button>
                   <Link className="link"
                     to='/checkout'>
                     Proceed to checkout

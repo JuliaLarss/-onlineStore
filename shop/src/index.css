@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+h1, h2, h3, h4, h5 ,h6{
+    text-transform: capitalize;
+}
 .nav{
     display: flex;
     justify-content: right;
@@ -17,7 +20,7 @@
     font-size: 20px;
 }
 .link:hover{
-    color:white;
+    color:rgb(199, 190, 160);
 }
 .homeContainer{
     display: flex;
@@ -30,6 +33,11 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.title{
+    color: White;
+    font-size: 50px;
+    text-transform: capitalize;
+}
 .pageContainer{
     display: flex;
     justify-content: center;
@@ -40,6 +48,7 @@
 .loading-error{
   position: absolute;
   top: 50%;
+  left: 50%;
 }
 
 .productsContainer{
@@ -144,6 +153,16 @@
     align-items: center;
     width: 100%;
 }
+.empty h5{
+    font-size: 20px;
+    margin-bottom: .5rem;
+}
+.empty button .link{
+    font-size: 16px;
+}
+.empty button{
+    margin-top: 1rem;
+}
 .cartContainer h4{
     margin-bottom: 4rem;
     font-size: 20px;
@@ -195,7 +214,7 @@
     justify-content: center;
     margin: 2rem auto;
     gap: 1rem;
-    width: 100%;
+    width: 40%;
 }
 .cartBtns p{
     width: 100%;
@@ -279,8 +298,12 @@ form input{
     border: 1px solid blue;
     border-radius: 5px;
     display: flex;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
     justify-content: space-between;
+}
+.payment form div{
+    width: 30%;
 }
 .other{
     width: 55%;
