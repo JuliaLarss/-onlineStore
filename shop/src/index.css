@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem ;
+}
+.link{
+    text-decoration: none;
+    color: black;
+    transition: all .2s ease-out;
+    font-size: 20px;
+}
+.link:hover{
+    color:white;
+}
+.homeContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-image: url(bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pageContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.loading-error{
+  position: absolute;
+  top: 50%;
+}
+
+.productsContainer{
+    background: rgba(222, 222, 222, .4);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 98%;
+    gap: 1rem;
+    margin: 5rem auto;
+}
+.product img{
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+}
+.product h3{
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 16px;
+    font-weight: lighter;
+}
+.product p{
+    position: absolute;
+    bottom: 1rem;
+    color: green;
+}
+.productLink{
+    width: 250px;
+    height: 350px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .2 ease-in-out;
+    padding: 2rem;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    margin: .5rem;
+}
+.productLink:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    border: 1px solid gray;
+    z-index: 100;
+}
+
+.productContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 2rem;
+    gap: 2rem;
+    height: 100vh;
+}
+
+.productContainer .image{
+    width: 45%;
+}
+.productContainer img{
+    width: 100%;
+}
+.productContainer .text{
+    width: 55%;
+}
+.text h2, .text p, .text h4{
+    margin-bottom: 1rem;
+}
+.text h4{
+    font-size: 20px;
+}
+.btnContainer{
+    display: flex;
+    gap: 2rem;
+}
+.linkBtn{
+    text-decoration: none;
+    padding: .4rem 1rem;
+    background: rgb(242, 244, 242);
+    border: 1px solid black;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+}
+.linkBtn .link{
+    font-size: 16px;
+    color: inherit;
+}
+
+.linkBtn:hover{
+    cursor: pointer;
+    background: rgb(220, 225, 220);
+    color: blue;
+}

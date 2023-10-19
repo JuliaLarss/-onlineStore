@@ -11,16 +11,21 @@ const ShopPage = () => {
   error && console.log('Error message: ', error)
   
     return (
-      <div>
-        {loading && (
-          <>
-            <Loading />
-          </>
-        )}
-        {error && <h1>{error}</h1>}
-        {data && data.map((product) => (
-          <Product key={product.id} product={product} />
-        ))}
+      <div className="pageContainer">
+        <div className="loading-error">
+          {loading && (
+            <>
+              <Loading />
+            </>
+          )}
+          {error && <h1>{error}</h1>}
+        </div>
+        <div className="productsContainer">
+          {data && data.map((product) => (
+            <Product key={product.id} product={product} />
+          ))}
+        </div>
+        
       </div>
     )
   }

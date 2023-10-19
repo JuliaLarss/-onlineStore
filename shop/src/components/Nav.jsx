@@ -9,10 +9,10 @@ const Nav = () => {
 
   return (
       <>
-        <nav>
-          <div><Link to='/'>Home</Link></div>
-          <div><Link to='/shop'>Shop</Link></div>
-          <div><Link to='/cart'>Cart</Link></div>
+        <nav className="nav">
+          <div><Link to='/'  className="link">Home</Link></div>
+          <div><Link to='/shop' className="link">Shop</Link></div>
+          <div><Link to='/cart'  className="link">Cart</Link></div>
         </nav>
         <Outlet context={Context} />
       </>

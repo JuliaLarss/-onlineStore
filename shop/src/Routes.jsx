@@ -17,7 +17,7 @@
             children: [
                 {path:'/', element:<HomePage />},
                 {path:'/shop', element:<ShopPage />},
-                {path:'/shop:id', element:<ViewProduct />},
+                {path:'/shop/:id', element:<ViewProduct />},
                 {path:'/cart', element:<CartPage />},
                 {path:'/checkout', element:<Checkout />}
             ],
